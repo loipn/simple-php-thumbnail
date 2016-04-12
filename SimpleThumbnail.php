@@ -3,13 +3,11 @@
 class SimpleThumbnail{
 	public static $_instance;
 
-	private $imageLocation;
-	private $sourceImage;
-	private $destImage;
+	private $imageLocation, $sourceImage, $destImage;
 	/**
 	 * New a class object
 	 **/
-	public static function start(){
+	public static function create(){
 		if(!(self::$_instance instanceof self)){
 			self::$_instance = new self();
 		}
@@ -66,5 +64,6 @@ class SimpleThumbnail{
 		} else if (exif_imagetype($this->imageLocation)==IMAGETYPE_PNG) {
 			imagepng($this->destImage, $imageDestLocation);
 		}
+		return true;
 	}
 }
