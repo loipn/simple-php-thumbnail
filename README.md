@@ -3,7 +3,7 @@ Very simple php thumbnail
 
 This is a very simple component that to generate image thumbnail by PHP
 
-Use age
+Usage
 -----------
 ```php
 <?php
